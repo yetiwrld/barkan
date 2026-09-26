@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Barbakan Delicatessen &amp; Bakery | Authentic Artisan Baked in Manchester Since 1964</title>
+<meta name="description" content="Barbakan Delicatessen &amp; Bakery — Manchester's finest artisan bakery since 1964. Award-winning breads, continental deli products, and handmade pastries in Chorlton and Wilmslow.">
+<meta property="og:title" content="Barbakan Delicatessen &amp; Bakery | Manchester Since 1964">
+<meta property="og:description" content="Award-winning artisan bakery &amp; continental deli in Chorlton &amp; Wilmslow. 62 years of authentic, handmade baking.">
+<meta property="og:type" content="website">
+<link rel="canonical" href="https://barbakan-deli.co.uk">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--cream:#FFF9F2;--warm-white:#FFFDF9;--cream-dark:#F5EDE0;--dark:#1A1209;--warm-brown:#5C3D2E;--primary:#8B1A1A;--primary-dark:#6B1414;--gold:#C8951A;--green:#4A6741;--border:#E8DDD0;--text-muted:#7A6555;--sh-sm:0 1px 3px rgba(26,18,9,.06);--sh-md:0 4px 16px rgba(26,18,9,.1);--r-sm:4px;--r-md:8px;--r-lg:16px;--t:.25s ease;--max-w:1200px;--pad:clamp(4rem,8vw,7rem)}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;font-size:16px}
+body{font-family:'DM Sans',system-ui,sans-serif;background:var(--cream);color:var(--dark);line-height:1.65;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+h1,h2,h3,h4{font-family:'Playfair Display',Georgia,serif;line-height:1.2;font-weight:700;color:var(--dark)}
+h1{font-size:clamp(2.4rem,6vw,4.5rem)}h2{font-size:clamp(2rem,4vw,3rem)}h3{font-size:clamp(1.4rem,2.5vw,1.9rem)}h4{font-size:1.25rem}
+.container{width:100%;max-width:var(--max-w);margin:0 auto;padding:0 clamp(1rem,4vw,2rem)}
+.section{padding:var(--pad) 0}.section--alt{background:var(--cream-dark)}.section--white{background:var(--warm-white)}
+.btn{display:inline-flex;align-items:center;gap:.5rem;padding:.75rem 1.75rem;font-family:'DM Sans',sans-serif;font-size:.9rem;font-weight:600;border:none;border-radius:var(--r-sm);cursor:pointer;transition:var(--t);text-decoration:none;white-space:nowrap}
+.btn-primary{background:var(--primary);color:#fff}.btn-primary:hover{background:var(--primary-dark);transform:translateY(-1px);box-shadow:var(--sh-md)}
+.btn-outline{background:transparent;color:var(--primary);border:2px solid var(--primary)}.btn-outline:hover{background:var(--primary);color:#fff}
+.btn-gold{background:var(--gold);color:#fff}.btn-gold:hover{background:#b88416;transform:translateY(-1px);box-shadow:var(--sh-md)}
+.btn-white{background:#fff;color:var(--primary)}.btn-white:hover{background:var(--cream-dark);transform:translateY(-1px)}
+.text-center{text-align:center}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0}
+.site-header{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(255,249,242,.92);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--border);transition:var(--t)}
+.site-header.scrolled{box-shadow:var(--sh-sm)}
+.site-header .container{display:flex;align-items:center;justify-content:space-between;height:68px;gap:2rem}
+.site-logo{display:flex;align-items:center;gap:.6rem;flex-shrink:0}
+.site-logo-text{font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:700;color:var(--dark);line-height:1}
+.site-logo-tagline{font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;color:var(--text-muted);display:block;margin-top:2px}
+.site-nav{display:flex;align-items:center}
+.site-nav a{font-size:.875rem;font-weight:500;color:var(--warm-brown);padding:.5rem .85rem;border-radius:var(--r-sm);transition:var(--t)}
+.site-nav a:hover,.site-nav a.active{color:var(--primary);background:rgba(139,26,26,.06)}
+.nav-cta{margin-left:1rem}
+@media(max-width:900px){.site-nav{display:none}.mobile-toggle{display:block;background:none;border:none;cursor:pointer;padding:.5rem;color:var(--dark)}}
+.mobile-toggle svg{width:24px;height:24px;display:block}
+.mobile-nav{display:none;position:fixed;inset:68px 0 0 0;background:var(--cream);padding:2rem;flex-direction:column;gap:.25rem;border-top:1px solid var(--border);overflow-y:auto;z-index:999}
+.mobile-nav.open{display:flex}
+.mobile-nav a{font-size:1.1rem;font-weight:500;color:var(--warm-brown);padding:.85rem 1rem;border-radius:var(--r-md);transition:var(--t)}
+.mobile-nav a:hover,.mobile-nav a.active{color:var(--primary);background:rgba(139,26,26,.06)}
+.hero{min-height:100vh;display:flex;align-items:center;background:var(--dark);position:relative;overflow:hidden;padding-top:68px}
+.hero-bg{position:absolute;inset:0;background:linear-gradient(135deg,rgba(26,18,9,.9) 0%,rgba(139,26,26,.65) 100%)}
+.hero-pattern{position:absolute;inset:0;opacity:.04;background-image:radial-gradient(circle 80px at 20% 30%,#fff 1px,transparent 1px),radial-gradient(circle 80px at 80% 70%,#fff 1px,transparent 1px),radial-gradient(circle 60px at 50% 50%,#fff 1px,transparent 1px);background-size:200px 200px,280px 280px,160px 160px}
+.hero-content{position:relative;z-index:1;color:#fff;max-width:720px}
+.hero-badge{display:inline-flex;align-items:center;gap:.5rem;background:rgba(200,149,26,.2);border:1px solid rgba(200,149,26,.4);color:var(--gold);font-size:.75rem;font-weight:600;letter-spacing:.15em;text-transform:uppercase;padding:.4rem 1rem;border-radius:100px;margin-bottom:1.5rem}
+.hero h1{color:#fff;margin-bottom:1.25rem}
+.hero-sub{font-size:clamp(1.05rem,2vw,1.25rem);color:rgba(255,255,255,.8);margin-bottom:2.5rem;line-height:1.7}
+.hero-actions{display:flex;gap:1rem;flex-wrap:wrap}
+.hero-awards{position:absolute;bottom:2rem;right:clamp(1rem,4vw,3rem);display:flex;flex-direction:column;gap:.75rem;z-index:1}
+@media(max-width:600px){.hero-awards{display:none}}
+.award-badge{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.15);backdrop-filter:blur(8px);padding:.6rem 1rem;border-radius:var(--r-md);color:rgba(255,255,255,.9);font-size:.8rem;text-align:center}
+.award-badge strong{display:block;font-size:1.25rem;color:var(--gold)}
+.hero-scroll{position:absolute;bottom:2rem;left:50%;transform:translateX(-50%);z-index:1;display:flex;flex-direction:column;align-items:center;gap:.4rem;color:rgba(255,255,255,.4);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;animation:bounce 2s infinite}
+@keyframes bounce{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(6px)}}
+</style>
+<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+<header class="site-header">
+<div class="container">
+<a href="#hero" class="site-logo" aria-label="Barbakan Delicatessen and Bakery">
+<span class="site-logo-text">Barbakan</span>
+<span class="site-logo-tagline">Delicatessen &amp; Bakery</span>
+</a>
+<nav class="site-nav" aria-label="Main navigation">
+<a href="#story">Our Story</a>
+<a href="#bakery">The Bakery</a>
+<a href="#deli">The Deli</a>
+<a href="#pan">Saturday Pan</a>
+<a href="#menu">Menu</a>
+<a href="#catering">Catering</a>
+<a href="#locations" class="nav-cta btn btn-primary">Visit Us</a>
+</nav>
+<button class="mobile-toggle" aria-label="Open menu" aria-expanded="false">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+</button>
+</div>
+</header>
+<nav class="mobile-nav" aria-label="Mobile navigation">
+<a href="#story">Our Story</a>
+<a href="#bakery">The Bakery</a>
+<a href="#deli">The Deli</a>
+<a href="#pan">Saturday Pan</a>
+<a href="#menu">Menu</a>
+<a href="#catering">Catering</a>
+<a href="#locations">Visit Us</a>
+</nav>
+<section id="hero" class="hero">
+<div class="hero-bg"></div>
+<div class="hero-pattern"></div>
+<div class="hero-content">
+<div class="hero-badge">
+<svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+10+ National Awards
+</div>
+<h1>Authentic.<br>Artisan.<br>Delicious.</h1>
+<p class="hero-sub">Manchester's finest artisan bakery and continental deli — handcrafting traditional European baked goods and exceptional deli fare since 1964. Sixty-two years of dedication to craft, quality, and community.</p>
+<div class="hero-actions">
+<a href="#story" class="btn btn-gold">Discover Our Story</a>
+<a href="#locations" class="btn btn-outline" style="border-color:rgba(255,255,255,.4);color:#fff;">Find Us</a>
+</div>
+</div>
+<div class="hero-awards">
+<div class="award-badge"><strong>62</strong>Years</div>
+<div class="award-badge"><strong>10+</strong>Awards</div>
+</div>
+<div class="hero-scroll">
+<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+Scroll
+</div>
+</section><div class="intro-strip">
+<div class="container">
+<div class="intro-stat"><strong>1964</strong><span>Est. Manchester</span></div>
+<div class="intro-stat"><strong>62</strong><span>Years of Craft</span></div>
+<div class="intro-stat"><strong>50+</strong><span>Staff Members</span></div>
+<div class="intro-stat"><strong>10+</strong><span>National Awards</span></div>
+<div class="intro-stat"><strong>2</strong><span>Manchester Locations</span></div>
+</div>
+</div>
+<div class="awards-bar"><div class="awards-track"><span class="award-item"><strong>10+</strong> National Awards</span><span class="award-item"><strong>1964</strong> Founded</span><span class="award-item"><strong>62</strong> Years Craft</span><span class="award-item"><strong>50+</strong> Breads &amp; Pastries</span><span class="award-item"><strong>Award Winner</strong> German Norlander</span><span class="award-item"><strong>48h</strong> Sourdough</span><span class="award-item"><strong>10+</strong> National Awards</span><span class="award-item"><strong>1964</strong> Founded</span><span class="award-item"><strong>62</strong> Years Craft</span><span class="award-item"><strong>50+</strong> Breads &amp; Pastries</span><span class="award-item"><strong>Award Winner</strong> German Norlander</span><span class="award-item"><strong>48h</strong> Sourdough</span></div></div>
+<section id="story" class="section">
+<div class="container">
+<div class="story-grid">
+<div class="story-image">
+<div class="story-image-placeholder" style="background:url('https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=900&auto=format&fit=crop&q=80') center/cover no-repeat;position:relative">
+<div class="story-year-badge">Est. 1964</div>
+</div>
+<div class="story-text">
+<p class="section-label">Our Story</p>
+<h2 class="section-title">A Manchester Institution Since 1964</h2>
+<div class="divider"></div>
+<p>Barbakan was founded on a simple belief: that exceptional bread and deli food should be made by hand, using traditional methods and the finest ingredients. For over six decades, we have been a cornerstone of Chorlton-cum-Hardy life, serving generation after generation of families who trust us for their daily bread.</p>
+<p class="quote">"We don't take shortcuts. Every loaf is hand-crafted, every sausage sourced with care. That's what sets us apart and always has."<cite>Frankie Dyer, Director</cite></p>
+<p>Today, under the stewardship of Director Frankie Dyer, Barbakan employs around 50 people across our Chorlton and Wilmslow locations. We wholesale to the University of Manchester and local businesses, while remaining true to the neighbourhood bakery ethos that has defined us since the beginning.</p>
+</div>
+</div>
+</div>
+</section><section id="bakery" class="section section--white">
+<div class="container">
+<div class="text-center mb-3">
+<p class="section-label" style="justify-content:center">The Bakery</p>
+<h2 class="section-title">Handcrafted Daily, Baked With Purpose</h2>
+<p class="section-subtitle" style="margin:0 auto">From our award-winning German Norlander loaf to our 48-hour fermented sourdough, every item that leaves our ovens carries 62 years of knowledge, passion, and uncompromising quality.</p>
+</div>
+<div class="grid-3" style="margin-top:2.5rem">
+<div class="product-card">
+<div class="product-card-image"><img src="https://images.unsplash.com/photo-1549931319-a545dcf3bc73?w=600&auto=format&fit=crop&q=80" alt="German Norlander loaf — award-winning German-style artisan bread with a golden crust" loading="lazy"></div>
+<div class="product-card-body">
+<p class="product-card-label">Award Winner</p>
+<h3 class="product-card-title">German Norlander</h3>
+<p class="product-card-desc">Our signature German-style loaf, recognised nationally for its exceptional crust, open crumb, and authentic flavour. A true testament to traditional European baking.</p>
+</div>
+</div>
+<div class="product-card">
+<div class="product-card-image"><img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?w=600&auto=format&fit=crop&q=80" alt="48-Hour Sourdough loaf with open, airy crumb and scored crust" loading="lazy"></div>
+<div class="product-card-body">
+<p class="product-card-label">Signature</p>
+<h3 class="product-card-title">48-Hour Sourdough</h3>
+<p class="product-card-desc">Slow-fermented for two full days to develop an extraordinarily complex flavour and a beautifully open, airy crumb. Made with simple, natural ingredients.</p>
+</div>
+</div>
+<div class="product-card">
+<div class="product-card-image"><img src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=600&auto=format&fit=crop&q=80" alt="Freshly baked ciabatta and focaccia loaves from Barbakan's oven" loading="lazy"></div>
+<div class="product-card-body">
+<p class="product-card-label">Bakery Favourite</p>
+<h3 class="product-card-title">Ciabatta &amp; Focaccia</h3>
+<p class="product-card-desc">Italian classics, made with olive oil and long fermentation. Light, airy interior with a crisp, golden crust. Perfect for sandwiches or alongside any meal.</p>
+</div>
+</div>
+<div class="product-card">
+<div class="product-card-image"><img src="https://images.unsplash.com/photo-1585521720278-1b37662f7666?w=600&auto=format&fit=crop&q=80" alt="Freshly boiled and baked Barbakan bagels with sesame and poppy seeds" loading="lazy"></div>
+<div class="product-card-body">
+<p class="product-card-label">Popular Choice</p>
+<h3 class="product-card-title">Bagels</h3>
+<p class="product-card-desc">Boiled then baked for that distinctive chewy texture. Available plain, sesame, poppy seed, and everything seasoning. Supplied to First Street Bagels.</p>
+</div>
+</div>
+<div class="product-card">
+<div class="product-card-image"><img src="https://images.unsplash.com/photo-1623334044303-241021148842?w=600&auto=format&fit=crop&q=80" alt="Laminated croissants and Danish pastries freshly baked at Barbakan" loading="lazy"></div>
+<div class="product-card-body">
+<p class="product-card-label">Pastry Selection</p>
+<h3 class="product-card-title">Danish &amp; Croissants</h3>
+<p class="product-card-desc">Laminated doughs, hand-finished daily. Our pain au chocolat, almond croissants, and seasonal Danish pastries are among the most sought-after in south Manchester.</p>
+</div>
+</div>
+<div class="product-card">
+<div class="product-card-image"><img src="https://images.unsplash.com/photo-1594989545472-c03ca30b6f06?w=600&auto=format&fit=crop&q=80" alt="Authentic Bavarian-style pretzels with dark crust and coarse salt from Barbakan" loading="lazy"></div>
+<div class="product-card-body">
+<p class="product-card-label">Viennese Speciality</p>
+<h3 class="product-card-title">Pretzels &amp; Rye</h3>
+<p class="product-card-desc">Authentic Bavarian-style soft pretzels with a characteristic dark crust and salted finish. Alongside our rye breads, these reflect our German continental roots.</p>
+</div>
+</div>
+</div>
+</div>
+</section><section id="deli" class="section section--alt">
+<div class="container">
+<div class="grid-2">
+<div>
+<p class="section-label">The Deli</p>
+<h2 class="section-title">Continental European<br>Delicatessen</h2>
+<div class="divider"></div>
+<p class="section-subtitle">Step beyond the bread counter and discover our carefully curated deli. From aged Continental cheeses to hand-carved charcuterie, olives, and house-made preserves, we bring the finest of European food culture to Manchester.</p>
+<div style="margin-top:2rem">
+<div class="feature-list">
+<div class="feature-item">
+<div class="feature-icon">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+</div>
+<div class="feature-text">
+<h4>Imported &amp; House-Cured Charcuterie</h4>
+<p>Prosciutto di Parma, chorizo, saucisson, and house-made specials.</p>
+</div>
+</div>
+<div class="feature-item">
+<div class="feature-icon">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
+</div>
+<div class="feature-text">
+<h4>Continental Cheeses</h4>
+<p>A curated selection sourced from specialist suppliers — aged cheddar, gorgonzola, Manchego, camembert, and seasonal specials.</p>
+</div>
+</div>
+<div class="feature-item">
+<div class="feature-icon">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="M8 12h8"/></svg>
+</div>
+<div class="feature-text">
+<h4>Olives, Oils &amp; Preserves</h4>
+<p>Kalamata olives,extra virgin olive oils, artisan balsamic, and fruit preserves.</p>
+</div>
+</div>
+<div class="feature-item">
+<div class="feature-icon">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg>
+</div>
+<div class="feature-text">
+<h4>Made-to-Order Platters</h4>
+<p>Custom charcuterie and cheese boards for gatherings, celebrations, and corporate events.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="deli-highlight">
+<div class="deli-pillar">
+<p class="deli-pillar-label">Catering</p>
+<h3>Events &amp; Functions</h3>
+<p>Bespoke deli platters, sandwich selections, and continental breakfasts for corporate events, weddings, and private celebrations.</p>
+</div>
+<div class="deli-pillar">
+<p class="deli-pillar-label">Wholesale</p>
+<h3>Trade Partners</h3>
+<p>We supply the University of Manchester and Bents Garden Centre, among others. Contact us to discuss wholesale arrangements.</p>
+</div>
+</div>
+</div>
+</div>
+</section><section id="pan" class="pan-hero">
+<div class="container">
+<div class="pan-grid">
+<div class="pan-text">
+<p class="pan-badge">
+<svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+Weekend Favourite
+</p>
+<h2>The Saturday German Sausage Pan</h2>
+<p>On Saturdays, our outdoor German sausage pan is a Chorlton institution. From 9am until sold out, we fire up the traditional pan and serve freshly grilled German sausages, sauerkraut, and mulled wine in a convivial outdoor setting. It's become one of Manchester's most beloved weekend traditions.</p>
+<p>Bring the family, grab a bench, and enjoy some of the finest German sausages outside of Berlin — right here in Chorlton.</p>
+<div>
+<a href="#locations" class="btn btn-gold">Get Directions</a>
+<a href="https://barbakan-deli.co.uk" target="_blank" rel="noopener" class="btn btn-white" style="border:2px solid rgba(255,255,255,.3)">Learn More</a>
+</div>
+</div>
+<div>
+<div class="product-card-image" style="aspect-ratio:4/3;border-radius:16px;overflow:hidden;background:url('https://images.unsplash.com/photo-1529041096609-9d5268822e26?w=600&auto=format&fit=crop&q=80') center/cover no-repeat"></div>
+</div>
+</div>
+</div>
+</section><section id="menu" class="section" style="background:var(--cream-dark)">
+<div class="container">
+<div class="text-center mb-3">
+<p class="section-label" style="justify-content:center">Our Menu</p>
+<h2 class="section-title">Freshly Made Every Day</h2>
+<p class="section-subtitle" style="margin:0 auto">Morning pastries, ciabatta sizzlers, and artisan drinks from both our Chorlton and Wilmslow locations.</p>
+</div>
+<div class="menu-tabs" style="justify-content:center">
+<button class="menu-tab active" data-tab="tab-breakfast">Breakfast</button>
+<button class="menu-tab" data-tab="tab-lunch">Ciabatta Sizzlers</button>
+<button class="menu-tab" data-tab="tab-cakes">Cakes &amp; Pastries</button>
+<button class="menu-tab" data-tab="tab-drinks">Drinks</button>
+</div>
+<div id="tab-breakfast" class="menu-tab-content active">
+<div class="menu-grid">
+<div class="menu-item"><div class="menu-item-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8h1a4 4 0 0 1 0 8h-1M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8zM6 1v3M10 1v3M14 1v3"/></svg></div><div class="menu-item-info"><h4>Full English Breakfast</h4><p>Sausage, bacon, eggs, mushroom, tomato, toast</p></div><div class="menu-item-price">£7.95</div></div>
+<div class="menu-item"><div class="menu-item-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/></svg></div><div class="menu-item-info"><h4>Eggs Benedict</h4><p>Poached eggs, ham, hollandaise on toasted muffin</p></div><div class="menu-item-price">£7.50</div></div>
+<div class="menu-item"><div class="menu-item-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg></div><div class="menu-item-info"><h4>Smoked Salmon Plate</h4><p>Scottish smoked salmon, cream cheese, capers, bagel</p></div><div class="menu-item-price">£8.50</div></div>
+<div class="menu-item"><div class="menu-item-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/></svg></div><div class="menu-item-info"><h4>Almond Croissant</h4><p>Butter croissant, almond frangipane, flaked almonds</p></div><div class="menu-item-price">£3.25</div></div>
+<div class="menu-item"><div class="menu-item-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div><div class="menu-item-info"><h4>Full Veggie Breakfast</h4><p>Eggs, halloumi, mushrooms, tomato, hash browns, toast</p></div><div class="menu-item-price">£7.50</div></div>
+</div>
+</div>
+<div id="tab-lunch" class="menu-tab-content">
+<div class="menu-grid">
+<div class="menu-item"><div class="menu-item-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/></svg></div><div class="menu-item-info"><h4>Classic Ciabatta</h4><p>Ham, cheese, tomato, rocket, house pesto</p></div><div class="menu-item-price">£6.50</div></div>
+<div class="menu-item"><div class="menu-item-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><div class="menu-item-info"><h4>German Sausage Sizzler</h4><p>Grilled German sausage, ciabatta, sauerkraut, mustard</p></div><div class="menu-item-price">£7.25</div></div>
+<div class="menu-item"><div class="menu-item-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2c-5.523 0-10 4.477-10 10s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zM12 8v8M8 12h8"/></svg></div><div class="menu-item-info"><h4>Chicken &amp; Bacon Sizzler</h4><p>Grilled chicken breast, streaky bacon, avocado, mayo</p></div><div class="menu-item-price">£7.95</div></div>
+<div class="menu-item"><div class="menu-item-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/></svg></div><div class="menu-item-info"><h4>Tuna Melt</h4><p>Tuna, sweetcorn, cheddar, cream cheese on ciabatta</p></div><div class="menu-item-price">£6.75</div></div>
+<div class="menu-item"><div class="menu-item-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8h1a4 4 0 0 1 0 8h-1M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/></svg></div><div class="menu-item-info"><h4>Soup of the Day</h4><p>Freshly made soup with crusty bread. Ask for today's choice.</p></div><div class="menu-item-price">£4.95</div></div>
+</div>
+</div>
+<div id="tab-cakes" class="menu-tab-content">
+<div class="menu-grid">
+<div class="menu-item"><div class="menu-item-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l9 20H3z"/></svg></div><div class="menu-item-info"><h4>Carrot Cake</h4><p>Moist carrot sponge, cream cheese frosting, walnut</p></div><div class="menu-item-price">£3.95</div></div>
+<div class="menu-item"><div class="menu-item-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/></svg></div><div class="menu-item-info"><h4>Chocolate Fudge Cake</h4><p>Rich Belgian chocolate sponge, glossy fudge icing</p></div><div class="menu-item-price">£4.25</div></div>
+<div class="menu-item"><div class="menu-item-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2c-5.523 0-10 4.477-10 10s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2z"/></svg></div><div class="menu-item-info"><h4>Victoria Sponge</h4><p>Classic vanilla sponge, strawberry jam, icing sugar</p></div><div class="menu-item-price">£3.50</div></div>
+<div class="menu-item"><div class="menu-item-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="8" rx="9" ry="4"/></svg></div><div class="menu-item-info"><h4>French Fruit Tart</h4><p>Pastry case, creme patissiere, seasonal fruits</p></div><div class="menu-item-price">£4.50</div></div>
+<div class="menu-item"><div class="menu-item-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div><div class="menu-item-info"><h4>Cappuccino Cake</h4><p>Coffee sponge, espresso buttercream, cocoa dust</p></div><div class="menu-item-price">£4.00</div></div>
+</div>
+</div>
+<div id="tab-drinks" class="menu-tab-content">
+<div class="menu-grid">
+<div class="menu-item"><div class="menu-item-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8h1a4 4 0 0 1 0 8h-1M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/></svg></div><div class="menu-item-info"><h4>Flat White</h4><p>Double espresso, velvety steamed milk. House blend.</p></div><div class="menu-item-price">£3.20</div></div>
+<div class="menu-item"><div class="menu-item-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8h1a4 4 0 0 1 0 8h-1M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/></svg></div><div class="menu-item-info"><h4>Cappuccino</h4><p>Espresso, foamed milk, cocoa dusting. Served large.</p></div><div class="menu-item-price">£3.50</div></div>
+<div class="menu-item"><div class="menu-item-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/></svg></div><div class="menu-item-info"><h4>Fresh Orange Juice</h4><p>Freshly squeezed orange juice. Served chilled.</p></div><div class="menu-item-price">£2.95</div></div>
+<div class="menu-item"><div class="menu-item-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/></svg></div><div class="menu-item-info"><h4>Loose Leaf Tea</h4><p>Selection of traditional teas. Ask for today's options.</p></div><div class="menu-item-price">£2.50</div></div>
+<div class="menu-item"><div class="menu-item-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div><div class="menu-item-info"><h4>Hot Chocolate</h4><p>Real Belgian chocolate, steamed milk, whipped cream</p></div><div class="menu-item-price">£3.75</div></div>
+</div>
+</div>
+</div>
+</div>
+</section><section id="catering" class="section section--white">
+<div class="container">
+<div class="text-center mb-3">
+<p class="section-label" style="justify-content:center">Catering &amp; Hampers</p>
+<h2 class="section-title">Bespoke Catering &amp; Gift Hampers</h2>
+<p class="section-subtitle" style="margin:0 auto">Whether you're planning a corporate event, private celebration, or looking for the perfect gift, Barbakan creates bespoke catering selections and artisan food hampers tailored to your needs.</p>
+</div>
+<div class="grid-2" style="margin-top:2.5rem;margin-bottom:2.5rem">
+<div class="deli-pillar">
+<p class="deli-pillar-label">Events</p>
+<h3>Corporate &amp; Private Catering</h3>
+<p>Bespoke deli platters, continental breakfast selections, sandwich boards, and afternoon tea arrangements for business meetings, conferences, weddings, and celebrations. Our team will work with you to create a menu that delights your guests.</p>
+</div>
+<div class="deli-pillar">
+<p class="deli-pillar-label">Gifts</p>
+<h3>Artisan Food Hampers</h3>
+<p>Beautifully packaged hampers featuring our award-winning breads, continental cheeses, charcuterie, preserves, and seasonal specials. Perfect for corporate gifts, housewarmings, or simply treating someone special.</p>
+</div>
+</div>
+<div class="catering-form">
+<form>
+<p style="font-size:1.1rem;font-weight:600;margin-bottom:1.5rem;color:var(--dark)">Enquiry Form</p>
+<div class="form-row">
+<div class="form-group">
+<label class="form-label" for="name">Your Name *</label>
+<input class="form-input" type="text" id="name" name="name" placeholder="Jane Smith" required>
+</div>
+<div class="form-group">
+<label class="form-label" for="email">Email Address *</label>
+<input class="form-input" type="email" id="email" name="email" placeholder="jane@example.com" required>
+</div>
+</div>
+<div class="form-group">
+<label class="form-label" for="type">Enquiry Type</label>
+<select class="form-select" id="type" name="type">
+<option value="">Please select...</option>
+<option>Catering - Corporate Event</option>
+<option>Catering - Private Event</option>
+<option>Artisan Food Hamper</option>
+<option>Wholesale Enquiry</option>
+<option>Other</option>
+</select>
+</div>
+<div class="form-group">
+<label class="form-label" for="date">Event Date (if applicable)</label>
+<input class="form-input" type="date" id="date" name="date">
+</div>
+<div class="form-group">
+<label class="form-label" for="message">Tell Us About Your Requirements</label>
+<textarea class="form-textarea" id="message" name="message" placeholder="Number of guests, dietary requirements, preferred delivery location, etc."></textarea>
+</div>
+<button type="submit" class="btn btn-primary" style="width:100%">Send Enquiry</button>
+</form>
+<div class="form-success">
+<svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2" style="margin:0 auto 1rem"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+<h3>Thank You!</h3>
+<p style="color:var(--text-muted)">We've received your enquiry and will be in touch shortly.</p>
+</div>
+</div>
+</div>
+</section><section id="locations" class="section section--alt">
+<div class="container">
+<div class="text-center mb-3">
+<p class="section-label" style="justify-content:center">Visit Us</p>
+<h2 class="section-title">Find Your Nearest Barbakan</h2>
+<p class="section-subtitle" style="margin:0 auto">Two locations across Greater Manchester, each offering the full Barbakan experience — fresh bread daily, our deli counter, and a welcoming cafe atmosphere.</p>
+</div>
+<div class="locations-grid" style="margin-top:2.5rem">
+<div class="location-card">
+<div class="map-placeholder">
+<svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+<br>Chorlton, Manchester
+</div>
+<h3 class="location-name">Chorlton</h3>
+<p class="location-address">67-71 Manchester Road<br>Chorlton-cum-Hardy<br>Manchester, M21 9PW</p>
+ <p class="location-hours"><strong>Mon–Fri 8:00am–4:30pm</strong><br>Saturday 8:30am–4:00pm<br>Sunday Closed</p><p style="margin-top:.5rem;font-size:.875rem"><a href="tel:01618817053">0161 881 7053</a> · <a href="mailto:barbakan.deli@hotmail.com">barbakan.deli@hotmail.com</a></p>
+<a href="https://www.google.com/maps/search/Barbakan+Manchester+Road+Manchester+M21+9PW" target="_blank" rel="noopener" class="btn btn-primary">Get Directions</a>
+</div>
+<div class="location-card">
+<div class="map-placeholder">
+<svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+<br>Wilmslow, Cheshire
+</div>
+<h3 class="location-name">Wilmslow</h3>
+<p class="location-address">1A Moor Lane<br>Wilmslow, SK9 6AG<br>Cheshire</p>
+ <p class="location-hours"><strong>Mon–Fri 7:00am–4:30pm</strong><br>Saturday 8:00am–4:00pm<br>Sunday Closed</p><p style="margin-top:.5rem;font-size:.875rem"><a href="tel:01618817053">0161 881 7053</a> · <a href="mailto:wilmslow@barbakan-deli.co.uk">wilmslow@barbakan-deli.co.uk</a></p>
+<a href="https://www.google.com/maps/search/Barbakan+Moor+Lane+Wilmslow+SK9+6AG" target="_blank" rel="noopener" class="btn btn-primary">Get Directions</a>
+</div>
+</div>
+<div class="contact-form" style="margin-top:3rem;max-width:560px;margin-left:auto;margin-right:auto;background:var(--warm-white);border:1px solid var(--border);border-radius:16px;padding:2.5rem">
+<p style="font-size:1.1rem;font-weight:600;margin-bottom:1.5rem;color:var(--dark);text-align:center">Get in Touch</p>
+<form>
+<div class="form-group">
+<label class="form-label" for="c-name">Your Name *</label>
+<input class="form-input" type="text" id="c-name" name="name" placeholder="Your full name" required>
+</div>
+<div class="form-group">
+<label class="form-label" for="c-email">Email Address *</label>
+<input class="form-input" type="email" id="c-email" name="email" placeholder="your@email.com" required>
+</div>
+<div class="form-group">
+<label class="form-label" for="c-message">Message *</label>
+<textarea class="form-textarea" id="c-message" name="message" placeholder="How can we help?" required></textarea>
+</div>
+<button type="submit" class="btn btn-primary" style="width:100%">Send Message</button>
+</form>
+</div>
+</div>
+</section>
+<footer class="site-footer">
+<div class="container">
+<div class="footer-grid">
+<div class="footer-brand">
+<a href="#hero" class="site-logo" style="margin-bottom:.5rem">
+<span class="site-logo-text">Barbakan</span>
+<span class="site-logo-tagline">Delicatessen &amp; Bakery</span>
+</a>
+<p>Authentic artisan bakery and continental deli serving Manchester since 1964. Award-winning breads, exceptional deli fare, and genuine hospitality.</p>
+</div>
+<div class="footer-col">
+<h4>Explore</h4>
+<a href="#story">Our Story</a>
+<a href="#bakery">The Bakery</a>
+<a href="#deli">The Deli</a>
+<a href="#menu">Our Menu</a>
+<a href="#catering">Catering &amp; Hampers</a>
+</div>
+<div class="footer-col">
+<h4>More</h4>
+<a href="#locations">Visit Us</a>
+<a href="https://barbakan-deli.co.uk" target="_blank" rel="noopener">Main Website</a>
+ <a href="https://www.facebook.com/barbakandeli" target="_blank" rel="noopener">Facebook</a>
+ <a href="https://www.instagram.com/barbakandeli" target="_blank" rel="noopener">Instagram</a>
+ <a href="#catering">Catering Enquiry</a>
+</div>
+</div>
+<div class="footer-bottom">
+<span>Barbakan Delicatessen &amp; Bakery. Est. Manchester, 1964.</span>
+<span>Company No. 789549</span>
+</div>
+</div>
+</footer>
+<script src="assets/js/script.js" defer></script>
+<script>
+fetch('assets/js/schema.json').then(r=>r.json()).then(d=>{
+  var s=document.createElement('script');
+  s.type='application/ld+json';
+  s.textContent=JSON.stringify(d);
+  document.head.appendChild(s);
+});
+</script>
+</body>
+</html>

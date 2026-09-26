@@ -1,0 +1,1242 @@
+# BARBAKAN — EXISTING PROJECT PREMIUM TRANSFORMATION
+
+You are continuing work on the EXISTING Barbakan Delicatessen & Bakery website project.
+
+THIS IS NOT A NEW PROJECT.
+
+THIS IS NOT A REBUILD FROM SCRATCH.
+
+THIS IS A MAJOR PROFESSIONAL UPGRADE OF THE EXISTING CODEBASE.
+
+The existing project, its files, architecture, components, assets, functionality, configuration, and working features are valuable and must be inspected before making changes.
+
+Do not throw away the existing implementation simply because it currently looks basic.
+
+Your job is to transform what already exists into a premium, production-quality digital experience.
+
+The final result must NOT look like an AI-generated template.
+
+It must look intentionally designed by an experienced premium web design and development team specifically for Barbakan Delicatessen & Bakery.
+
+============================================================
+0. FIRST RULE — INSPECT BEFORE MODIFYING
+============================================================
+
+Before changing anything:
+
+1. Inspect the complete existing project structure.
+2. Identify the framework and architecture.
+3. Identify existing pages.
+4. Identify existing components.
+5. Identify existing styles/design system.
+6. Identify existing assets.
+7. Identify existing backend/database functionality.
+8. Identify existing routes.
+9. Identify existing authentication.
+10. Identify existing ordering functionality, if any.
+11. Identify installed dependencies.
+12. Identify environment variables and integrations WITHOUT exposing secrets.
+13. Read existing project instructions.
+14. Locate and READ `getdesign.md`.
+15. Locate all relevant installed skills.
+16. Determine what can be preserved.
+17. Determine what must be redesigned.
+18. Determine what must be refactored.
+19. Determine what is missing.
+
+Do not begin replacing the architecture until you understand the current architecture.
+
+Do not delete existing functionality merely because you prefer a different implementation.
+
+============================================================
+1. DESIGN AUTHORITY — getdesign.md
+============================================================
+
+`getdesign.md` is a PRIMARY DESIGN REFERENCE for this project.
+
+READ IT.
+
+Understand it.
+
+Extract its:
+
+- visual language
+- layout principles
+- typography
+- spacing
+- color direction
+- component style
+- navigation approach
+- interaction patterns
+- imagery direction
+- animation principles
+- responsive behavior
+- overall design philosophy
+
+Then APPLY those principles to the existing Barbakan website.
+
+Do not blindly copy a reference website.
+
+Use `getdesign.md` as the design direction and translate its principles into a Barbakan-specific experience.
+
+If there is a conflict between:
+
+- the current basic design
+- generic AI design habits
+- `getdesign.md`
+
+then `getdesign.md` should guide the visual direction unless doing so would break functionality or accessibility.
+
+============================================================
+2. PREMIUM DESIGN STANDARD
+============================================================
+
+The current website is too basic.
+
+That is not acceptable for the final result.
+
+The new result must feel:
+
+- premium
+- sophisticated
+- intentional
+- authentic
+- editorial
+- warm
+- memorable
+- commercially credible
+- visually distinctive
+- highly polished
+
+It must NOT feel like:
+
+- a generic AI website
+- a Tailwind starter template
+- a SaaS landing page
+- a random restaurant template
+- a collection of rounded cards
+- a collection of gradients
+- a generic "Welcome to..." website
+- an AI-generated portfolio
+- an unfinished prototype
+
+Avoid design clichés unless `getdesign.md` specifically calls for them.
+
+Do not overuse:
+
+- gradients
+- glassmorphism
+- floating cards
+- excessive rounded rectangles
+- giant headings
+- excessive shadows
+- meaningless animations
+- glowing borders
+- generic icon grids
+- repetitive card layouts
+- unnecessary statistics
+- fake testimonials
+- fake awards
+- generic stock imagery
+
+Every visual decision should have a reason.
+
+============================================================
+3. DESIGN THE EXPERIENCE, NOT JUST THE PAGES
+============================================================
+
+Think about Barbakan as a real physical business.
+
+The website should communicate the character of:
+
+BARBAKAN
+DELICATESSEN & BAKERY
+MANCHESTER
+
+The design should make a visitor feel that this is an established real business rather than an AI demonstration.
+
+Study the available public business information and existing brand material.
+
+Understand:
+
+- what the business sells
+- who its customers are
+- what makes the business distinctive
+- what customers need to know
+- what products deserve attention
+- what actions customers should take
+- how customers currently discover the business
+- how the website can make visiting or ordering easier
+
+Do not invent facts.
+
+Use verified information.
+
+============================================================
+4. EXISTING WEBSITE TRANSFORMATION
+============================================================
+
+Preserve the useful foundation.
+
+Then progressively upgrade:
+
+- visual hierarchy
+- typography
+- navigation
+- spacing
+- imagery
+- page composition
+- sections
+- product presentation
+- calls to action
+- responsive behavior
+- micro-interactions
+- accessibility
+- performance
+- SEO
+- content presentation
+
+If a component is structurally useful but visually weak:
+
+REDESIGN IT.
+
+If a component is technically poor:
+
+REFACTOR IT.
+
+If a component is unnecessary:
+
+REMOVE IT only after confirming it is not required elsewhere.
+
+If functionality already works:
+
+PRESERVE IT while improving its presentation.
+
+============================================================
+5. PREMIUM HOMEPAGE
+============================================================
+
+Rework the homepage substantially.
+
+Do not simply change colors and fonts.
+
+The homepage should have a deliberate narrative.
+
+The visitor should naturally progress through:
+
+IDENTITY
+→
+DISCOVERY
+→
+PRODUCTS
+→
+STORY / TRUST
+→
+VISIT OR ORDER
+→
+ACTION
+
+The exact section structure should be determined by research and `getdesign.md`.
+
+Potential sections may include:
+
+- strong brand-led hero
+- product discovery
+- bakery/deli highlights
+- story/about
+- visual product showcase
+- location/visit information
+- ordering call-to-action
+- social proof where genuinely verified
+- footer
+
+Do not automatically use all of these.
+
+Build the strongest composition for this business.
+
+============================================================
+6. TYPOGRAPHY AND SPACING
+============================================================
+
+Typography must feel intentionally selected.
+
+Establish:
+
+- display typography
+- body typography
+- hierarchy
+- line-height
+- letter spacing
+- responsive scaling
+
+Avoid default-looking typography.
+
+Spacing must be deliberate.
+
+Do not fill every section with cards.
+
+Use:
+
+- whitespace
+- composition
+- imagery
+- typography
+- alignment
+- rhythm
+
+to create hierarchy.
+
+============================================================
+7. IMAGERY
+============================================================
+
+Use imagery intelligently.
+
+Prioritize authentic Barbakan imagery where publicly available and appropriate.
+
+Do not misrepresent generic images as actual Barbakan products or premises.
+
+If suitable imagery is unavailable, use appropriate visual treatment that can easily be replaced later.
+
+Image handling must include:
+
+- responsive sizing
+- proper cropping
+- appropriate object positioning
+- lazy loading where appropriate
+- optimization
+- useful alt text
+
+Images should contribute to the storytelling rather than simply filling empty space.
+
+============================================================
+8. NAVIGATION
+============================================================
+
+Create a premium navigation experience.
+
+It must be:
+
+- simple
+- elegant
+- responsive
+- obvious
+- fast
+
+Mobile navigation must be deliberately designed rather than being a desktop navigation squeezed into a hamburger menu.
+
+The ordering experience must have a clear entry point.
+
+============================================================
+9. MAJOR NEW FEATURE — ORDERING EXPERIENCE
+============================================================
+
+This is NOT merely a "menu" page.
+
+Build a separate, premium, fully functioning ordering experience.
+
+It should feel like a proper digital ordering platform.
+
+The public Barbakan website and the ordering platform should feel like parts of the same brand, while having different purposes.
+
+The ordering experience should have its own dedicated route/destination.
+
+Example conceptual structure:
+
+/order
+
+or another architecture appropriate to the existing project.
+
+The final URL must be shareable.
+
+A customer should be able to receive the ordering link directly and open it.
+
+============================================================
+10. ORDERING PLATFORM UX
+============================================================
+
+The ordering experience should support a complete customer journey.
+
+At minimum, design and implement where appropriate:
+
+1. Landing/order entry
+2. Product categories
+3. Product browsing
+4. Product details
+5. Product images
+6. Product descriptions
+7. Prices based on verified/configured data
+8. Product options/modifiers where applicable
+9. Add to cart
+10. Cart
+11. Quantity adjustment
+12. Remove item
+13. Order summary
+14. Customer authentication
+15. Customer account
+16. Checkout
+17. Order submission
+18. Order confirmation
+19. Order status/history
+20. Mobile ordering experience
+
+Do NOT create fake buttons.
+
+If a button says "Add to cart", it must actually add the product.
+
+If a customer logs in, the authentication must actually work.
+
+If an order is submitted, it must actually be stored.
+
+If order history is displayed, it must come from real persisted order data.
+
+No simulated functionality.
+
+============================================================
+11. CUSTOMER LOGIN
+============================================================
+
+The ordering platform should include a proper customer account system.
+
+The user should be able to:
+
+- create an account
+- log in
+- log out
+- remain authenticated appropriately
+- access their account
+- view relevant order history
+- manage appropriate account information
+
+Use the existing backend/authentication infrastructure if it already exists.
+
+Do not replace working authentication unnecessarily.
+
+If authentication is missing, implement it using the project's existing backend architecture or the most appropriate existing technology.
+
+Never expose credentials.
+
+Passwords must never be stored insecurely.
+
+============================================================
+12. SHAREABLE ORDERING LINK
+============================================================
+
+The ordering experience must have a clean URL that can be sent to customers.
+
+The URL should take the customer directly into the ordering experience.
+
+The customer should not have to navigate through the main website to find it.
+
+The ordering destination should work independently enough that it can be shared through:
+
+- WhatsApp
+- Instagram
+- Facebook
+- QR codes
+- direct messages
+- printed materials
+- the main website
+
+The exact URL architecture should follow the existing project's routing system.
+
+============================================================
+13. ORDERING PLATFORM DESIGN
+============================================================
+
+The ordering system must NOT look like a generic admin dashboard.
+
+It should feel like a premium food-commerce experience.
+
+Design priorities:
+
+- excellent product imagery
+- clear categories
+- fast browsing
+- obvious prices
+- clean cart
+- smooth checkout
+- excellent mobile experience
+- minimal friction
+- strong visual hierarchy
+- consistent Barbakan branding
+
+The ordering interface should be optimized for phones because customers may access it through a shared link.
+
+============================================================
+14. PRODUCT DATA ARCHITECTURE
+============================================================
+
+Do not hard-code the entire ordering system into random UI components.
+
+Create a proper product data structure.
+
+Products should support appropriate fields such as:
+
+- name
+- description
+- category
+- price
+- image
+- availability
+- options
+- modifiers
+- status
+- ordering metadata
+
+Use the existing database where available.
+
+If a database already exists, inspect its schema before modifying it.
+
+Do not destroy existing production data.
+
+============================================================
+15. CART SYSTEM
+============================================================
+
+Build a real cart.
+
+It must correctly handle:
+
+- adding products
+- quantity changes
+- removing products
+- product options
+- price calculation
+- subtotal
+- applicable fees if configured
+- final total
+- empty state
+- persistence where appropriate
+
+Test edge cases.
+
+Examples:
+
+- quantity 0
+- duplicate products
+- multiple modifiers
+- unavailable product
+- refresh
+- login/logout
+- mobile navigation
+- abandoned cart
+
+Do not allow inconsistent totals between frontend and backend.
+
+Server-side validation must be used for authoritative order calculations.
+
+============================================================
+16. CHECKOUT
+============================================================
+
+Design checkout around the actual business requirements.
+
+Do not invent payment methods.
+
+Before implementing payment processing, inspect the current project and determine what payment infrastructure exists.
+
+If payment integration requires credentials, configuration, merchant approval, or external authorization, do not fabricate them.
+
+Build the architecture so the actual payment provider can be connected securely.
+
+Never put secret API keys in frontend code.
+
+============================================================
+17. ORDER DATABASE
+============================================================
+
+Orders must be persisted properly.
+
+A proper order should contain appropriate information such as:
+
+- order ID
+- customer
+- products
+- quantities
+- prices at time of purchase
+- options/modifiers
+- subtotal
+- total
+- order status
+- timestamps
+- relevant fulfillment information
+
+Use secure server-side logic.
+
+Do not trust client-submitted prices.
+
+============================================================
+18. ORDER STATUS
+============================================================
+
+Create an order status architecture that can support the real business workflow.
+
+Possible statuses may include:
+
+- pending
+- confirmed
+- preparing
+- ready
+- completed
+- cancelled
+
+Do not assume Barbakan's actual workflow.
+
+Make the statuses configurable or use only verified requirements.
+
+============================================================
+19. ORDER HISTORY
+============================================================
+
+Authenticated customers should be able to view previous orders.
+
+Display useful information such as:
+
+- order number
+- date
+- items
+- total
+- status
+
+Do not expose another customer's orders.
+
+Enforce authorization server-side.
+
+============================================================
+20. MOBILE ORDERING
+============================================================
+
+Treat mobile ordering as a first-class experience.
+
+Test:
+
+- small phone widths
+- large phone widths
+- touch targets
+- sticky cart access where appropriate
+- checkout
+- forms
+- keyboard behavior
+- product browsing
+- category navigation
+
+A customer should be able to complete the ordering flow comfortably from a phone.
+
+============================================================
+21. PUBLIC WEBSITE ↔ ORDERING PLATFORM
+============================================================
+
+Create a clear relationship between the two experiences.
+
+PUBLIC WEBSITE:
+
+Brand
+Story
+Products
+Location
+Business information
+Discovery
+Trust
+Marketing
+
+ORDERING PLATFORM:
+
+Browse
+Select
+Cart
+Account
+Checkout
+Orders
+
+Do not make them feel like two unrelated applications.
+
+Share the same underlying brand language while allowing the ordering platform to prioritize speed and conversion.
+
+============================================================
+22. ADMIN / FUTURE MANAGEMENT
+============================================================
+
+Inspect whether the existing project already contains an admin system.
+
+If it does, preserve and improve it.
+
+Where appropriate, structure the system so authorized business administrators can eventually manage:
+
+- products
+- prices
+- availability
+- categories
+- orders
+- order statuses
+
+Do not expose administrative controls to normal customers.
+
+Do not invent an admin workflow if one already exists.
+
+============================================================
+23. SECURITY
+============================================================
+
+This is a real application, not a visual demo.
+
+Take security seriously.
+
+Check:
+
+- authentication
+- authorization
+- database access
+- row-level access where applicable
+- API routes
+- server-side validation
+- price validation
+- order ownership
+- secrets
+- environment variables
+- input validation
+- injection risks
+- unauthorized order access
+- unauthorized admin access
+
+A customer must never be able to retrieve another customer's private order information.
+
+============================================================
+24. PERFORMANCE
+============================================================
+
+The site should feel fast.
+
+Optimize:
+
+- images
+- fonts
+- JavaScript
+- database requests
+- API calls
+- unnecessary re-renders
+- loading states
+- route loading
+- mobile performance
+
+Use loading states where network operations may take time.
+
+Do not make the UI appear broken while data is loading.
+
+============================================================
+25. PREMIUM INTERACTIONS
+============================================================
+
+Add interaction only where it improves the experience.
+
+Examples:
+
+- subtle hover states
+- polished transitions
+- smooth category changes
+- elegant image interactions
+- cart feedback
+- loading states
+- confirmation states
+- meaningful micro-interactions
+
+Avoid animation for decoration alone.
+
+Animations must not make the website feel like an AI-generated showcase.
+
+============================================================
+26. ACCESSIBILITY
+============================================================
+
+Perform a complete accessibility pass.
+
+Check:
+
+- keyboard navigation
+- focus states
+- semantic HTML
+- form labels
+- contrast
+- alt text
+- button labels
+- heading hierarchy
+- screen-reader behavior
+- touch target sizes
+- reduced-motion behavior
+
+============================================================
+27. SEO
+============================================================
+
+Upgrade the public website's technical SEO.
+
+Check:
+
+- titles
+- descriptions
+- headings
+- canonical URLs
+- structured data
+- Open Graph
+- sitemap
+- robots
+- semantic HTML
+- local business information
+
+Do not add fake claims to structured data.
+
+============================================================
+28. TESTING — DO NOT SKIP
+============================================================
+
+Test the actual application.
+
+Do not merely inspect source code.
+
+Test:
+
+PUBLIC WEBSITE
+- every page
+- navigation
+- mobile menu
+- links
+- buttons
+- images
+- forms
+- responsive layouts
+
+ORDERING PLATFORM
+- open shared link
+- browse products
+- category navigation
+- product details
+- add to cart
+- quantity changes
+- remove item
+- checkout
+- account creation
+- login
+- logout
+- order creation
+- order confirmation
+- order history
+- authorization
+
+Test both:
+
+DESKTOP
+
+and
+
+MOBILE.
+
+============================================================
+29. BUG-FIX LOOP
+============================================================
+
+Whenever something fails:
+
+DO NOT simply move on.
+
+1. Reproduce the issue.
+2. Find the root cause.
+3. Fix it.
+4. Test it again.
+5. Check for regressions.
+6. Continue.
+
+Maintain a concise issue record in the repository.
+
+============================================================
+30. ANTI-AI-DESIGN REVIEW
+============================================================
+
+After the website works, perform a dedicated visual review.
+
+Ask:
+
+"Would a professional web designer look at this and immediately think this is an AI-generated template?"
+
+If YES:
+
+identify why.
+
+Then fix it.
+
+Look specifically for:
+
+- generic layouts
+- repetitive cards
+- excessive rounded corners
+- generic gradients
+- generic copy
+- predictable hero sections
+- excessive whitespace with no compositional purpose
+- excessive whitespace without hierarchy
+- random animations
+- generic stock images
+- inconsistent typography
+- weak visual rhythm
+- unnecessary sections
+- visually noisy UI
+
+Repeat until the result feels intentionally art-directed.
+
+============================================================
+31. SELF-CRITIQUE LOOP
+============================================================
+
+After each major milestone, perform:
+
+CURRENT STATE
+What currently exists?
+
+WEAKNESSES
+What looks or works poorly?
+
+MISSING
+What is still required?
+
+RISKS
+What could break?
+
+NEXT IMPROVEMENT
+What single improvement would have the greatest impact?
+
+ACTION
+Implement it.
+
+VERIFY
+Test it.
+
+Then continue.
+
+Do not wait for the user to tell you every small next step.
+
+============================================================
+32. DO NOT REBUILD THE PROJECT
+============================================================
+
+This instruction is extremely important.
+
+DO NOT:
+
+- delete the project
+- create a replacement project beside it
+- start a separate application
+- throw away existing architecture
+- replace the entire codebase unnecessarily
+- create a fake demonstration
+- create a static mockup instead of functional features
+
+Instead:
+
+INSPECT → PRESERVE → REFACTOR → UPGRADE → EXTEND → TEST.
+
+Only replace an existing subsystem when there is a concrete technical/design reason.
+
+============================================================
+33. CONTEXT MANAGEMENT — CRITICAL
+============================================================
+
+This project is large.
+
+Do NOT attempt to keep the entire project history in the active conversation.
+
+The repository is the source of truth.
+
+Create and maintain concise project-state files.
+
+At minimum maintain:
+
+`PROJECT_STATE.md`
+
+This file should contain:
+
+- project objective
+- current architecture
+- completed work
+- current stage
+- important design decisions
+- important technical decisions
+- known issues
+- next tasks
+- pending user decisions
+- important file locations
+
+Also create/update where useful:
+
+`REQUIREMENTS.md`
+`DESIGN_SYSTEM.md`
+`QA_STATUS.md`
+`CHANGELOG.md`
+
+Keep these files concise.
+
+Do NOT dump the entire codebase into them.
+
+Do NOT copy entire tool outputs into them.
+
+Do NOT duplicate large skill files.
+
+Store decisions and state, not conversation history.
+
+============================================================
+34. CONTEXT-SAFE WORKING METHOD
+============================================================
+
+Work in small, coherent phases.
+
+Example:
+
+PHASE 1
+Inspect existing project and design reference.
+
+PHASE 2
+Document current architecture and state.
+
+PHASE 3
+Upgrade design system.
+
+PHASE 4
+Upgrade public website.
+
+PHASE 5
+Build/upgrade ordering architecture.
+
+PHASE 6
+Implement authentication.
+
+PHASE 7
+Implement product/catalog system.
+
+PHASE 8
+Implement cart.
+
+PHASE 9
+Implement checkout/order persistence.
+
+PHASE 10
+Implement order history/status.
+
+PHASE 11
+Responsive/mobile refinement.
+
+PHASE 12
+Security audit.
+
+PHASE 13
+SEO/accessibility/performance.
+
+PHASE 14
+Visual polish.
+
+PHASE 15
+Final QA.
+
+Do not attempt to perform the entire project in one enormous response.
+
+Complete one coherent phase at a time.
+
+After completing a phase:
+
+1. Update `PROJECT_STATE.md`.
+2. Update `CHANGELOG.md`.
+3. Record important decisions.
+4. Record remaining issues.
+5. Verify the work.
+6. Continue.
+
+============================================================
+35. CONTEXT COMPACTION SURVIVAL
+============================================================
+
+If OpenCode compacts the conversation:
+
+DO NOT assume previous conversation text is still available.
+
+Immediately reconstruct the working state from:
+
+- `PROJECT_STATE.md`
+- `REQUIREMENTS.md`
+- `DESIGN_SYSTEM.md`
+- `QA_STATUS.md`
+- `CHANGELOG.md`
+- actual source files
+- `getdesign.md`
+- relevant skills
+
+Then continue from the recorded current stage.
+
+Do NOT ask the user to paste the giant original prompt again.
+
+Do NOT recreate completed work.
+
+Do NOT restart the project.
+
+The repository is the persistent memory.
+
+============================================================
+36. IMPORTANT — SKILLS
+============================================================
+
+Use the installed relevant skills.
+
+Do not ignore them.
+
+Before implementing a major area, determine whether an installed skill applies.
+
+Especially use the relevant design skill and READ:
+
+`getdesign.md`
+
+Do not repeatedly paste the full contents of skills into conversation.
+
+Load them when needed.
+
+Follow their instructions.
+
+============================================================
+37. IMPORTANT — FILE READING
+============================================================
+
+Do not blindly read every file in the repository into context.
+
+Inspect the structure first.
+
+Then read only the files relevant to the current task.
+
+Avoid loading:
+
+- huge generated files
+- node_modules
+- build output
+- large logs
+- unnecessary assets
+- entire dependency trees
+
+Use focused inspection.
+
+This is both a context-management requirement and an engineering requirement.
+
+============================================================
+38. GIT / CHANGE SAFETY
+============================================================
+
+Before major changes:
+
+Inspect the current git status.
+
+Understand what has already changed.
+
+Do not accidentally erase existing user work.
+
+After meaningful milestones:
+
+Create a clear checkpoint/commit if the repository workflow supports it.
+
+The purpose is to make the upgrade recoverable.
+
+============================================================
+39. NO FAKE COMPLETION
+============================================================
+
+Never tell the user:
+
+"Everything is done"
+
+when functionality is only mocked.
+
+Never describe:
+
+- fake checkout
+- fake authentication
+- fake orders
+- fake database persistence
+- fake admin controls
+
+as complete functionality.
+
+If something genuinely requires credentials or external configuration, implement everything possible and clearly record the remaining configuration requirement.
+
+============================================================
+40. FINAL QUALITY BAR
+============================================================
+
+The final website should be good enough to show as a serious website-development proposal to the actual business.
+
+It should not look like:
+
+"AI made a website in 10 minutes."
+
+It should look like:
+
+"A professional digital team carefully designed and engineered this experience for this specific business."
+
+The ordering platform should similarly feel like a real product, not a demo.
+
+============================================================
+41. YOUR EXECUTION RULE
+============================================================
+
+From this point forward:
+
+DO NOT simply wait for instructions after every small task.
+
+Think in terms of the complete project.
+
+But remain within the current phase.
+
+At the end of each phase:
+
+- verify
+- document
+- update project state
+- identify the next highest-value task
+- continue
+
+Never skip testing.
+
+Never skip visual inspection.
+
+Never skip security review.
+
+Never skip mobile testing.
+
+Never sacrifice quality simply to finish faster.
+
+============================================================
+42. START NOW
+============================================================
+
+Do NOT rebuild the project.
+
+Do NOT create a second website.
+
+Do NOT start by blindly changing code.
+
+Start by:
+
+1. Inspecting the current repository.
+2. Inspecting the current git status.
+3. Reading `getdesign.md`.
+4. Identifying relevant installed skills.
+5. Inspecting the current architecture.
+6. Inspecting the current website implementation.
+7. Identifying what already works.
+8. Identifying what is visually weak.
+9. Identifying what is missing.
+10. Creating/updating `PROJECT_STATE.md`.
+11. Creating/updating the project requirements/state documentation.
+12. Creating a phased upgrade plan.
+13. Beginning the first upgrade phase.
+
+Do not ask me to paste information that already exists in the repository.
+
+Do not rebuild anything unnecessarily.
+
+The existing project is the foundation.
+
+Upgrade it systematically until the complete premium Barbakan website and ordering experience meet the quality requirements above.
+
+BUILD → INSPECT → TEST → FIX → DOCUMENT → IMPROVE → REPEAT.
