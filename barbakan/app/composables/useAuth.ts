@@ -1,36 +1,92 @@
-export const useAuth = () => {
-  const user = useState('auth.user', () => null)
-  const isLoggedIn = computed(() => !!user.value)
+interface User {
+  id: number
+  name: string
+  email: string
+}
 
-  const register = async (name: string, email: string, password: string) => {
+export const useAuth = () => {
+  const user = useState<User | null>('auth.user', () => null)
+  const isLoggedIn = computed(() => !!user.value)
+  const loading = useState<boolean>('auth.loading', () => false)
+
+  // Initialize from localStorage on client
+  const init = () => {
+    if (typeof window === 'undefined') return
     try {
-      const res = await $fetch('/api/auth/register', {
+      const raw = localStorage.getItem('barbakan_user')
+      if (raw) {
+        const parsed = JSON.parse(raw)
+        if (parsed && parsed.id && parsed.email) {
+          user.value = parsed
+        }
+      }
+    } catch {}
+  }
+
+  // Persist
+  const persist = (u: User | null) => {
+    if (typeof window === 'undefined') return
+    if (u) {
+      localStorage.setItem('barbakan_user', JSON.stringify(u))
+      // also set cookie for server-side checks (non-httpOnly for simplicity, real prod should use httpOnly)
+      document.cookie = `barbakan_user=${encodeURIComponent(JSON.stringify(u))}; path=/; max-age=${60*60*24*30}; SameSite=Lax`
+    } else {
+      localStorage.removeItem('barbakan_user')
+      document.cookie = 'barbakan_user=; path=/; max-age=0'
+    }
+  }
+
+  const register = async (name: string, email: string, password: string): Promise<{ success: boolean; error?: string }> => {
+    loading.value = true
+    try {
+      const res = await $fetch<{ success: boolean; user: User }>('/api/auth/register', {
         method: 'POST',
         body: { name, email, password }
       })
-      if (res.success) {
+      if (res.success && res.user) {
         user.value = res.user
-        return true
+        persist(res.user)
+        return { success: true }
       }
-    } catch (e) {}
-    return false
+      return { success: false, error: 'Registration failed' }
+    } catch (e: any) {
+      const msg = e?.data?.message || e?.statusMessage || 'Registration failed'
+      return { success: false, error: msg }
+    } finally {
+      loading.value = false
+    }
   }
 
-  const login = async (email: string, password: string) => {
+  const login = async (email: string, password: string): Promise<{ success: boolean; error?: string }> => {
+    loading.value = true
     try {
-      const res = await $fetch('/api/auth/login', {
+      const res = await $fetch<{ success: boolean; user: User }>('/api/auth/login', {
         method: 'POST',
         body: { email, password }
       })
-      if (res.success) {
+      if (res.success && res.user) {
         user.value = res.user
-        return true
+        persist(res.user)
+        return { success: true }
       }
-    } catch (e) {}
-    return false
+      return { success: false, error: 'Invalid credentials' }
+    } catch (e: any) {
+      const msg = e?.data?.message || e?.statusMessage || 'Invalid email or password'
+      return { success: false, error: msg }
+    } finally {
+      loading.value = false
+    }
   }
 
-  const logout = () => { user.value = null }
+  const logout = () => {
+    user.value = null
+    persist(null)
+  }
 
-  return { user, isLoggedIn, register, login, logout }
+  // Auto-init on client
+  if (typeof window !== 'undefined' && !user.value) {
+    init()
+  }
+
+  return { user, isLoggedIn, loading, register, login, logout, init }
 }

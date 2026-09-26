@@ -1,4 +1,4 @@
-﻿import { getDb } from '../../database/db'
+import { getDb } from '../../database/db'
 
 export default defineEventHandler(async (event) => {
   const query = getQuery(event)
@@ -6,8 +6,9 @@ export default defineEventHandler(async (event) => {
   
   const db = getDb()
   let products = db.products.filter((p: any) => p.active === 1)
-  if (category) {
+  if (category && category !== 'all') {
     products = products.filter((p: any) => p.category === category)
   }
-  return products
+  // Sort by id for consistency
+  return products.sort((a, b) => a.id - b.id)
 })

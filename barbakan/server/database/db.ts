@@ -1,54 +1,89 @@
-﻿import { readFileSync, writeFileSync, existsSync } from 'fs'
+import { readFileSync, writeFileSync, existsSync, mkdirSync, renameSync } from 'fs'
 import { join } from 'path'
 
+interface Product {
+  id: number
+  name: string
+  description: string
+  price: number
+  category: string
+  image: string
+  active: number
+  badge?: string
+}
+
+interface User {
+  id: number
+  name: string
+  email: string
+  password: string
+  created_at: string
+}
+
+interface Order {
+  id: number
+  user_id: number | null
+  status: string
+  total: number
+  customer_name: string
+  customer_email: string
+  customer_phone: string
+  delivery_address: string
+  notes: string
+  created_at: string
+}
+
+interface OrderItem {
+  id: number
+  order_id: number
+  product_id: number
+  quantity: number
+  price: number
+}
+
 interface Database {
-  products: any[]
-  users: any[]
-  orders: any[]
-  order_items: any[]
+  products: Product[]
+  users: User[]
+  orders: Order[]
+  order_items: OrderItem[]
 }
 
 const dataDir = join(process.cwd(), 'data')
 const dbPath = join(dataDir, 'barbakan.json')
 
-const defaultData: Database = {
-  products: [
-    { id: 1, name: 'Pierogi Ruskie', description: 'Traditional Polish dumplings with potato and cheese filling', price: 8.99, category: 'pierogi', image: 'https://images.unsplash.com/photo-1596560548464-f010549b84d7?w=400', active: 1 },
-    { id: 2, name: 'Pierogi z Miesem', description: 'Dumplings filled with seasoned meat', price: 9.49, category: 'pierogi', image: 'https://images.unsplash.com/photo-1603133872878-684f208fb84b?w=400', active: 1 },
-    { id: 3, name: 'Kielbasa', description: 'Traditional Polish smoked sausage', price: 12.99, category: 'meats', image: 'https://images.unsplash.com/photo-1558030006-450675393462?w=400', active: 1 },
-    { id: 4, name: 'Bigos', description: 'Traditional Polish hunter stew with sauerkraut and meat', price: 14.99, category: 'meals', image: 'https://images.unsplash.com/photo-1547592166-23ac45744acd?w=400', active: 1 },
-    { id: 5, name: 'Golabki', description: 'Cabbage rolls stuffed with meat and rice', price: 13.99, category: 'meals', image: 'https://images.unsplash.com/photo-1529042410759-befb1204b468?w=400', active: 1 },
-    { id: 6, name: 'zurek', description: 'Traditional Polish sourdough soup with sausage and egg', price: 7.99, category: 'soups', image: 'https://images.unsplash.com/photo-1547592166-23ac45744acd?w=400', active: 1 },
-    { id: 7, name: 'Paczek', description: 'Polish doughnuts filled with rose jam', price: 4.99, category: 'bakery', image: 'https://images.unsplash.com/photo-1551024601-bec78aea704b?w=400', active: 1 },
-    { id: 8, name: 'Sernik', description: 'Traditional Polish cheesecake', price: 6.99, category: 'bakery', image: 'https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=400', active: 1 },
-    { id: 9, name: 'Kapusniak', description: 'Polish soup with sauerkraut and vegetables', price: 6.99, category: 'soups', image: 'https://images.unsplash.com/photo-1547592166-23ac45744acd?w=400', active: 1 },
-    { id: 10, name: 'Placki Ziemniaczane', description: 'Polish potato pancakes', price: 7.99, category: 'sides', image: 'https://images.unsplash.com/photo-1596560548464-f010549b84d7?w=400', active: 1 },
-    { id: 11, name: 'Nalesniki', description: 'Polish crepes with sweet or savory filling', price: 8.49, category: 'pierogi', image: 'https://images.unsplash.com/photo-1596560548464-f010549b84d7?w=400', active: 1 },
-    { id: 12, name: 'Borsch', description: 'Beetroot soup with vegetables', price: 7.49, category: 'soups', image: 'https://images.unsplash.com/photo-1547592166-23ac45744acd?w=400', active: 1 },
-    { id: 13, name: 'Kotlet Schabowy', description: 'Breaded pork cutlet with sides', price: 15.99, category: 'meals', image: 'https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?w=400', active: 1 },
-    { id: 14, name: 'Zrazy Wolowe', description: 'Beef rolls with bacon and pickles', price: 18.99, category: 'meals', image: 'https://images.unsplash.com/photo-1544025162-d76694265947?w=400', active: 1 },
-    { id: 15, name: 'Kapusta Kiszona', description: 'Fermented Polish sauerkraut', price: 4.99, category: 'sides', image: 'https://images.unsplash.com/photo-1596560548464-f010549b84d7?w=400', active: 1 },
-    { id: 16, name: 'Ogorki Konserwowe', description: 'Polish pickled cucumbers', price: 3.99, category: 'sides', image: 'https://images.unsplash.com/photo-1596560548464-f010549b84d7?w=400', active: 1 },
-    { id: 17, name: 'Chleb', description: 'Traditional Polish rye bread', price: 3.49, category: 'bakery', image: 'https://images.unsplash.com/photo-1509440159596-0249088772ff?w=400', active: 1 },
-    { id: 18, name: 'Makowiec', description: 'Polish poppy seed roll cake', price: 5.99, category: 'bakery', image: 'https://images.unsplash.com/photo-1551024601-bec78aea704b?w=400', active: 1 },
-    { id: 19, name: 'Kompot', description: 'Traditional Polish fruit compote', price: 2.99, category: 'drinks', image: 'https://images.unsplash.com/photo-1544145945-f90425340c7e?w=400', active: 1 },
-    { id: 20, name: 'Kisiel', description: 'Polish fruit jelly dessert', price: 3.49, category: 'desserts', image: 'https://images.unsplash.com/photo-1551024601-bec78aea704b?w=400', active: 1 },
-    { id: 21, name: 'Barszcz Czerwony', description: 'Polish beetroot soup', price: 6.49, category: 'soups', image: 'https://images.unsplash.com/photo-1547592166-23ac45744acd?w=400', active: 1 }
-  ],
-  users: [],
-  orders: [],
-  order_items: []
+function ensureDataDir() {
+  if (!existsSync(dataDir)) {
+    mkdirSync(dataDir, { recursive: true })
+  }
 }
 
 function loadDb(): Database {
+  ensureDataDir()
   if (!existsSync(dbPath)) {
-    writeFileSync(dbPath, JSON.stringify(defaultData, null, 2))
-    return defaultData
+    // Return empty structure, will be populated from file if exists else default handled by initial file
+    // Try to read from bundled default if available
+    try {
+      const defaultPath = join(process.cwd(), 'data', 'barbakan.json')
+      if (existsSync(defaultPath)) {
+        return JSON.parse(readFileSync(defaultPath, 'utf-8'))
+      }
+    } catch {}
+    const empty: Database = { products: [], users: [], orders: [], order_items: [] }
+    writeFileSync(dbPath, JSON.stringify(empty, null, 2))
+    return empty
   }
   try {
-    return JSON.parse(readFileSync(dbPath, 'utf-8'))
+    const raw = readFileSync(dbPath, 'utf-8')
+    const parsed = JSON.parse(raw)
+    // Ensure arrays exist
+    return {
+      products: Array.isArray(parsed.products) ? parsed.products : [],
+      users: Array.isArray(parsed.users) ? parsed.users : [],
+      orders: Array.isArray(parsed.orders) ? parsed.orders : [],
+      order_items: Array.isArray(parsed.order_items) ? parsed.order_items : []
+    }
   } catch {
-    return defaultData
+    return { products: [], users: [], orders: [], order_items: [] }
   }
 }
 
@@ -57,12 +92,46 @@ export function getDb(): Database {
 }
 
 export function saveDb(data: Database) {
-  writeFileSync(dbPath, JSON.stringify(data, null, 2))
+  ensureDataDir()
+  // Atomic write via temp file
+  const tmpPath = dbPath + '.tmp'
+  writeFileSync(tmpPath, JSON.stringify(data, null, 2))
+  // Rename
+  try {
+    renameSync(tmpPath, dbPath)
+  } catch {
+    // Fallback direct write
+    writeFileSync(dbPath, JSON.stringify(data, null, 2))
+  }
 }
 
 export function getNextId(table: 'users' | 'orders' | 'order_items'): number {
   const db = loadDb()
-  const items = db[table]
+  const items = db[table] as { id: number }[]
   if (!items.length) return 1
-  return Math.max(...items.map((i: any) => i.id)) + 1
+  return Math.max(...items.map((i) => i.id)) + 1
+}
+
+export function findProductById(id: number): Product | undefined {
+  const db = loadDb()
+  return db.products.find((p) => p.id === id && p.active === 1)
+}
+
+export function calculateOrderTotal(items: { id: number; quantity: number }[]): { total: number; validatedItems: { product_id: number; quantity: number; price: number; name: string }[] } {
+  const db = loadDb()
+  let total = 0
+  const validatedItems: { product_id: number; quantity: number; price: number; name: string }[] = []
+  for (const it of items) {
+    const product = db.products.find((p) => p.id === it.id && p.active === 1)
+    if (!product) {
+      throw new Error(`Product ${it.id} not found or inactive`)
+    }
+    const qty = Math.max(1, Math.min(99, Math.floor(it.quantity) || 1))
+    const price = Number(product.price)
+    total += price * qty
+    validatedItems.push({ product_id: product.id, quantity: qty, price, name: product.name })
+  }
+  // Round to 2 decimals
+  total = Math.round(total * 100) / 100
+  return { total, validatedItems }
 }

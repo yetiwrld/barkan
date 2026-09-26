@@ -2,6 +2,9 @@ import { getDb } from '../../database/db'
 
 export default defineEventHandler(async (event) => {
   const id = parseInt(event.context.params?.id || '0')
+  if (!id || isNaN(id)) {
+    throw createError({ statusCode: 400, message: 'Invalid product id' })
+  }
   const db = getDb()
   const product = db.products.find((p: any) => p.id === id && p.active === 1)
   if (!product) {
