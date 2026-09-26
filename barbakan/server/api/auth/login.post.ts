@@ -29,5 +29,5 @@ export default defineEventHandler(async (event) => {
     throw createError({ statusCode: 401, message: 'Invalid email or password' })
   }
 
-  return { success: true, user: { id: user.id, name: user.name, email: user.email } }
+  return { success: true, user: { id: user.id, name: user.name, email: user.email, isAdmin: !!user.isAdmin } }
 })

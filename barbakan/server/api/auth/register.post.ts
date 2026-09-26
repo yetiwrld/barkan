@@ -40,10 +40,11 @@ export default defineEventHandler(async (event) => {
     name: trimmedName,
     email: trimmedEmail,
     password: hashedPassword,
-    created_at: new Date().toISOString()
+    created_at: new Date().toISOString(),
+    isAdmin: false
   }
   db.users.push(newUser)
   saveDb(db)
 
-  return { success: true, user: { id: newUser.id, name: newUser.name, email: newUser.email } }
+  return { success: true, user: { id: newUser.id, name: newUser.name, email: newUser.email, isAdmin: false } }
 })

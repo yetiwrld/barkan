@@ -14,6 +14,7 @@
           <NuxtLink to="/#pan">Saturday</NuxtLink>
           <NuxtLink to="/order">Order</NuxtLink>
           <template v-if="auth.isLoggedIn.value">
+            <NuxtLink v-if="auth.isAdmin.value" to="/admin">Admin</NuxtLink>
             <NuxtLink to="/account">Account</NuxtLink>
           </template>
           <template v-else>
@@ -45,6 +46,7 @@
       <NuxtLink to="/#pan" @click="mobileOpen = false">Saturday Pan</NuxtLink>
       <NuxtLink to="/order" @click="mobileOpen = false">Order Online</NuxtLink>
       <template v-if="auth.isLoggedIn.value">
+        <NuxtLink v-if="auth.isAdmin.value" to="/admin" @click="mobileOpen = false">Admin Portal</NuxtLink>
         <NuxtLink to="/account" @click="mobileOpen = false">My Account</NuxtLink>
         <button class="btn btn-ghost" @click="handleLogout">Logout</button>
       </template>

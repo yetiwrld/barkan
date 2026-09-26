@@ -18,6 +18,7 @@ interface User {
   email: string
   password: string
   created_at: string
+  isAdmin?: boolean
 }
 
 interface Order {
@@ -57,34 +58,72 @@ function ensureDataDir() {
   }
 }
 
+const ADMIN_DEFAULT = {
+  id: 1,
+  name: 'Barbakan Admin',
+  email: 'admin@barbakan.co.uk',
+  // password: admin123
+  password: '$2a$10$DcFQ5zNSVeE.VyGauYltS.Pe9DgxqmRNrTIs6//5TSfWQOSKYbEce',
+  created_at: new Date().toISOString(),
+  isAdmin: true
+}
+
 function loadDb(): Database {
   ensureDataDir()
+  let db: Database
   if (!existsSync(dbPath)) {
-    // Return empty structure, will be populated from file if exists else default handled by initial file
-    // Try to read from bundled default if available
+    db = { products: [], users: [], orders: [], order_items: [] }
+  } else {
     try {
-      const defaultPath = join(process.cwd(), 'data', 'barbakan.json')
-      if (existsSync(defaultPath)) {
-        return JSON.parse(readFileSync(defaultPath, 'utf-8'))
+      const raw = readFileSync(dbPath, 'utf-8')
+      const parsed = JSON.parse(raw)
+      db = {
+        products: Array.isArray(parsed.products) ? parsed.products : [],
+        users: Array.isArray(parsed.users) ? parsed.users : [],
+        orders: Array.isArray(parsed.orders) ? parsed.orders : [],
+        order_items: Array.isArray(parsed.order_items) ? parsed.order_items : []
       }
-    } catch {}
-    const empty: Database = { products: [], users: [], orders: [], order_items: [] }
-    writeFileSync(dbPath, JSON.stringify(empty, null, 2))
-    return empty
-  }
-  try {
-    const raw = readFileSync(dbPath, 'utf-8')
-    const parsed = JSON.parse(raw)
-    // Ensure arrays exist
-    return {
-      products: Array.isArray(parsed.products) ? parsed.products : [],
-      users: Array.isArray(parsed.users) ? parsed.users : [],
-      orders: Array.isArray(parsed.orders) ? parsed.orders : [],
-      order_items: Array.isArray(parsed.order_items) ? parsed.order_items : []
+    } catch {
+      db = { products: [], users: [], orders: [], order_items: [] }
     }
-  } catch {
-    return { products: [], users: [], orders: [], order_items: [] }
   }
+
+  // Seed default admin if not present
+  const hasAdmin = db.users.some(u => u.email.toLowerCase() === ADMIN_DEFAULT.email.toLowerCase() || u.isAdmin)
+  if (!hasAdmin) {
+    // Ensure id not colliding
+    if (db.users.some(u => u.id === ADMIN_DEFAULT.id)) {
+      ADMIN_DEFAULT.id = db.users.length ? Math.max(...db.users.map(u => u.id)) + 1 : 1
+    }
+    db.users.push({ ...ADMIN_DEFAULT })
+    try {
+      const tmpPath = dbPath + '.tmp'
+      writeFileSync(tmpPath, JSON.stringify(db, null, 2))
+      renameSync(tmpPath, dbPath)
+    } catch {
+      writeFileSync(dbPath, JSON.stringify(db, null, 2))
+    }
+  } else {
+    // Ensure existing admin has isAdmin flag
+    let changed = false
+    for (const u of db.users) {
+      if (u.email.toLowerCase() === ADMIN_DEFAULT.email.toLowerCase() && !u.isAdmin) {
+        u.isAdmin = true
+        changed = true
+      }
+    }
+    if (changed) {
+      try {
+        const tmpPath = dbPath + '.tmp'
+        writeFileSync(tmpPath, JSON.stringify(db, null, 2))
+        renameSync(tmpPath, dbPath)
+      } catch {
+        writeFileSync(dbPath, JSON.stringify(db, null, 2))
+      }
+    }
+  }
+
+  return db
 }
 
 export function getDb(): Database {

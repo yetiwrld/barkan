@@ -2,11 +2,13 @@ interface User {
   id: number
   name: string
   email: string
+  isAdmin?: boolean
 }
 
 export const useAuth = () => {
   const user = useState<User | null>('auth.user', () => null)
   const isLoggedIn = computed(() => !!user.value)
+  const isAdmin = computed(() => !!user.value?.isAdmin || ['admin@barbakan.co.uk','admin@barbakan-deli.co.uk','admin@barbakan.local'].includes(user.value?.email?.toLowerCase() || ''))
   const loading = useState<boolean>('auth.loading', () => false)
 
   // Initialize from localStorage on client
@@ -88,5 +90,5 @@ export const useAuth = () => {
     init()
   }
 
-  return { user, isLoggedIn, loading, register, login, logout, init }
+  return { user, isLoggedIn, isAdmin, loading, register, login, logout, init }
 }
